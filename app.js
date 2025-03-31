@@ -282,16 +282,9 @@ Complete the exercise in the space below:
 const createUsername = (firstName, lastName) => {
     let firstHalf = firstName[0] + firstName[1] + firstName[2];
     let lastHalf = lastName[0] + lastName[1] + lastName[2];
-    let characterCount = 0;
-    for (let i = 0; i < firstName.length; i++) {
-        characterCount += 1
-    }
-    for (let i = 0; i < lastName.length; i++) {
-        characterCount += 1
-    }
+    let characterCount = firstName.length + lastName.length;
     return `${firstHalf}${lastHalf}${characterCount}`
 }
-// DISCLAIMER: I would like to combine the two for loops in the future but right now I don't know how to pass through two different parameters/arguments
 
 console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
 console.log('Exercise 11 Result:', createUsername("Joshua", "Moon"));
