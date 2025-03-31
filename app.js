@@ -241,15 +241,20 @@ Complete the exercise in the space below:
 
 const calculateGrade = (score) => {
     if (score >= 90) {
-        return 'A'}
+        return 'A'
+    }
     else if (score >= 80) {
-        return 'B'}
+        return 'B'
+    }
     else if (score >= 70) {
-        return 'C'}
+        return 'C'
+    }
     else if (score >= 60) {
-        return 'D'}
+        return 'D'
+    }
     else if (score <= 59) {
-        return 'F'}
+        return 'F'
+    }
     else {return 'This is not a valid score.'}
 }
 
