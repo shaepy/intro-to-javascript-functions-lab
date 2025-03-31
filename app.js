@@ -213,7 +213,7 @@ function basicCalculator (numA, numB, operation) {
         return numA / numB
     }
     else {
-        return 'An error has occurred.'
+        return 'This is not a valid operation.'
     }
 }
 
@@ -222,3 +222,84 @@ console.log('Exercise 9 Result:', basicCalculator(100, 4, "subtract"));
 console.log('Exercise 9 Result:', basicCalculator(52, 7, "multiply"));
 console.log('Exercise 9 Result:', basicCalculator(425, 11, "divide"));
 console.log('Exercise 9 Result:', basicCalculator(12, 7, "square"));
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+function calculateGrade (score) {
+    if (score >= 90) {return 'A'}
+    else if (score >= 80) {return 'B'}
+    else if (score >= 70) {return 'C'}
+    else if (score >= 60) {return 'D'}
+    else if (score <= 59) {return 'F'}
+    else {return 'This is not a valid score.'}
+}
+
+console.log('Exercise 10 Result:', calculateGrade(81));
+console.log('Exercise 10 Result:', calculateGrade(100));
+console.log('Exercise 10 Result:', calculateGrade(62));
+console.log('Exercise 10 Result:', calculateGrade(32));
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
+
+Complete the exercise in the space below:
+*/
+
+function createUsername (firstName, lastName) {
+    let firstHalf = firstName[0] + firstName[1] + firstName[2];
+    let lastHalf = lastName[0] + lastName[1] + lastName[2];
+    let characterCount = 0;
+    for (let i = 0; i < firstName.length; i++) {
+        characterCount += 1
+    }
+    for (let i = 0; i < lastName.length; i++) {
+        characterCount += 1
+    }
+    return `${firstHalf}${lastHalf}${characterCount}`
+}
+// DISCLAIMER: I would like to combine the two for loops in the future but right now I don't know how to pass through two different parameters/arguments
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+console.log('Exercise 11 Result:', createUsername("Joshua", "Moon"));
+
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+
+function numArgs() {
+    let argumentCount = 0;
+    for (let i = 0; i < arguments.length; i++) {
+        argumentCount += 1
+    }
+    return argumentCount;
+}
+
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
