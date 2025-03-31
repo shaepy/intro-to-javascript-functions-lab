@@ -144,9 +144,9 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-function calculateTip (billAmount, tipPercent) {
-    let tipFloat = tipPercent / 100
-    return billAmount * tipFloat
+function calculateTip (billAmount, tip) {
+    let tipPercent = tip / 100
+    return billAmount * tipPercent
 }
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
@@ -303,3 +303,4 @@ function numArgs() {
 }
 
 console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
+console.log('Exercise 12 Result:', numArgs('a', 'b', 3, 4, 6, "one"));
