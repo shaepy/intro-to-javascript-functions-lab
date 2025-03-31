@@ -29,7 +29,7 @@ Example: isAdult(21) should return 'Adult'.
 Complete the exercise in the space below:
 */
 
-function isAdult (age) {
+const isAdult = (age) => {
     if (age >= 18) {
         return 'Adult'
     }
@@ -39,6 +39,7 @@ function isAdult (age) {
 }
 
 console.log('Exercise 2 Result:', isAdult(21));
+console.log('Exercise 2 Result:', isAdult(12));
 
 /*
 Exercise 3: isCharAVowel()
@@ -55,7 +56,7 @@ Complete the exercise in the space below:
 
 const vowels = ['a', 'e', 'i', 'o', 'u'];
 
-function isCharAVowel(character) {
+const isCharAVowel = (character) => {
     if (vowels.includes(character)) {
         return true;
     }
@@ -79,7 +80,7 @@ should return 'johnsmith@example.com'.
 Complete the exercise in the space below:
 */
 
-function generateEmail (name, domain) {
+const generateEmail = (name, domain) => {
     return `${name}@${domain}`
 }
 
@@ -97,7 +98,7 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-function greetUser (name, timeOfDay) {
+const greetUser = (name, timeOfDay) => {
     return `Good ${timeOfDay}, ${name}!`
 }
 
@@ -115,7 +116,7 @@ Example: maxOfThree(17, 4, 9) should return 17.
 Complete the exercise in the space below:
 */
 
-function maxOfThree (numA, numB, numC) {
+const maxOfThree = (numA, numB, numC) => {
     if (numA > numB && numA > numC) {
         return numA
     }
@@ -144,7 +145,7 @@ Example: calculateTip(50, 20) should return 10.
 Complete the exercise in the space below:
 */
 
-function calculateTip (billAmount, tip) {
+const calculateTip = (billAmount, tip) => {
     let tipPercent = tip / 100
     return billAmount * tipPercent
 }
@@ -166,7 +167,7 @@ Example: convertTemperature(32, 'F') should return 0 (Celsius).
 Complete the exercise in the space below:
 */
 
-function convertTemperature(temp, scale) {
+const convertTemperature = (temp, scale) => {
     if (scale === 'C') {
         let fahrenheit = (temp * 9/5) + 32
         return fahrenheit;
@@ -199,7 +200,7 @@ Example: basicCalculator(10, 5, 'subtract') should return 5.
 Complete the exercise in the space below:
 */
 
-function basicCalculator (numA, numB, operation) {
+const basicCalculator = (numA, numB, operation) => {
     if (operation === 'add') {
         return numA + numB
     }
@@ -238,12 +239,17 @@ Example: calculateGrade(100) should return A.
 Complete the exercise in the space below:
 */
 
-function calculateGrade (score) {
-    if (score >= 90) {return 'A'}
-    else if (score >= 80) {return 'B'}
-    else if (score >= 70) {return 'C'}
-    else if (score >= 60) {return 'D'}
-    else if (score <= 59) {return 'F'}
+const calculateGrade = (score) => {
+    if (score >= 90) {
+        return 'A'}
+    else if (score >= 80) {
+        return 'B'}
+    else if (score >= 70) {
+        return 'C'}
+    else if (score >= 60) {
+        return 'D'}
+    else if (score <= 59) {
+        return 'F'}
     else {return 'This is not a valid score.'}
 }
 
@@ -268,7 +274,7 @@ Example: createUsername('Samantha', 'Green') should return 'SamGre13'.
 Complete the exercise in the space below:
 */
 
-function createUsername (firstName, lastName) {
+const createUsername = (firstName, lastName) => {
     let firstHalf = firstName[0] + firstName[1] + firstName[2];
     let lastHalf = lastName[0] + lastName[1] + lastName[2];
     let characterCount = 0;
